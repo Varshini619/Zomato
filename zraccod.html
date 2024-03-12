@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style>
+    *{
+        outline:none;
+        margin:0px;
+        padding:opx;
+    }
+    .head{
+        display:flex;
+        justify-content:space-between;
+        width:80%;
+        background-color:white;
+        color:rgb(0, 0, 0);
+        align-items:center;
+        padding:0px 15px;
+        box-sizing:border-box;
+        font-size:20px;
+        margin-bottom:20px;
+        left:300px;
+        margin-bottom: 4vh;
+    }
+    .desc{
+        width:80%;
+        left:700px;
+        text-align:justify;
+        font-size:35px;
+        color:rgb(15, 15, 16);
+        display:none;
+        line-height: 4vh;
+        margin-bottom: 4vh;
+    }
+    .con{
+        width:100%;
+        height:80vh;
+        left:500px;
+    }
+ </style>
+</head>
+<body>
+    <div class="con">
+    <div class="head"><h1>what will zomato charge me for creating a page on its platform?</h1>
+        <i class="fa-solid fa-caret-down" onclick="fun(0)"></i></div>
+    <div class="desc">Creating a restaurant page on Zomato is free of cost. You can maintain your page by replying to reviews and do a lot more without any charges.</div>
+    <div class="head"><h1>What all documents are required for registering on online ordering?</h1><i class="fa-solid fa-caret-down" onclick="fun(1)"></i></div>
+    <div class="desc">Registration for online ordering requires:
+        a: FSSAI certificate (application no. if FSSAl is not present)
+        b: PAN Card
+        c: GST certificate (if applicable)</div>
+    <div class="head"><h1>have a large fleet of delivery boys. why should I use Zomato's delivery service?</h1><i class="fa-solid fa-caret-down" onclick="fun(2)"></i></div>
+    <div class="desc">You can use your and Zomato's delivery fleet simultaneously to increase the network of your delivery radius Also, our delivery fleet delivers orders in minimum possible time, a key factor leading to increased customer satisfactio</div>
+    <div class="head"><h1>What happens if the average order value of Zomato orders is very low?</h1><i class="fa-solid fa-caret-down" onclick="fun(3)"></i></div>
+    <div class="desc">Average order value from our platform is generally more than Rs 250. However, in some cases, users want to try out your place by ordering for lesser amount. But we have observed that they eventually come back with higher value orders if they like your food</div>
+</div>
+    <script>
+        let desr=document.getElementsByClassName("desc")
+        let ire=document.getElementsByTagName("i")
+        let p=0
+        let fun=(ind)=>{
+            if(ind==p)
+            {
+                if(ire[ind].classList.contains('fa-caret-up'))
+                {
+                    ire[ind].className="fa-solid fa-caret-down"
+                    desr[ind].style.display="none"
+                }
+                else{
+                    ire[ind].className="fa-solid fa-caret-up"
+                    desr[ind].style.display="block"
+                }
+            }
+            else{
+                ire[p].className="fa-solid fa-caret-down"
+                desr[p].style.display="none"
+                ire[ind].className="fa-solid fa-caret-up"
+                desr[ind].style.display="block"
+                p=ind
+
+            }
+        }
+    </script>
+    
+</body>
+</html>
